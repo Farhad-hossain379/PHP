@@ -31,4 +31,3 @@ printf ("%s (%s)\n",$row["Name"],$row["Email"]);
 mysqli_free_result($result);
 
 mysqli_close($con);*/
-
