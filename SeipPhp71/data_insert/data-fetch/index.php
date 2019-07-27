@@ -12,34 +12,74 @@ die();*/
 ?>
 
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fetch data from database</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fetch data from database</title>
+        <link rel="stylesheet" href="style_for_dropdownbutton.css">
 
-<table border="1" ; width="400px" ; align="center" ; line>
-    <tr>
-        <th colspan="4"><h3> Engineers Record</h3></th>
-    </tr>
-    <tr>
-        <th> ID</th>
-        <th> Name</th>
-        <th> Email</th>
-        <th> Phone</th>
-    </tr>
-    <?php foreach ($rows as $row) { ?>
-        <tr>
-            <td> <?=$row['ID']?></td>
-            <td> <?=$row['Name']?></td>
-            <td> <?=$row['Email']?></td>
-            <td> <?=$row['phone']?></td>
-        </tr>
-    <?php } ?>
+    </head>
+    <body>
 
-</table>
-</body>
+        <table border="1" ; align="center" ; line>
+            <tr>
+                <th colspan="5"><h3> Engineers Record(Skylark Soft Limited )</h3></th>
+            </tr>
+            <tr>
+                <th> ID</th>
+                <th> Name</th>
+                <th> Email</th>
+                <th> Phone</th>
+                <th width="20px"> </th>
+            </tr>
+                <?php foreach ($rows as $row) { ?>
+                    <tr>
+                        <td> <?=$row['ID']?></td>
+                        <td> <?=$row['Name']?></td>
+                        <td> <?=$row['Email']?></td>
+                        <td> <?=$row['phone']?></td>
+                    </tr>
+                <?php } ?>
+
+        </table>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
+
+
+
+
+
+    </body>
 </html>
