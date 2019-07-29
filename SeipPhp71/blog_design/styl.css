@@ -1,26 +1,103 @@
-*{padding: 0; margin: 0;}
-#wrapper{ border: solid; padding: 10px;}
-#header{ height: 100px;padding: 10px; background-color: gray;}
-#logo{width: 150px; height: 100px;}
+*{
+    box-sizing: border-box;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+}
+.header{
+    height: 160px;
+    padding: 10px;
+    background-color:gray;
+}
+.logo{
+    width: 150px;
+    height: 100px;
+    float: left;
+}
+
+.login{
+   /* width: 60px;
+    height: 60px;*/
+/*    border: 3px solid red;*/
+    float: right;
+    text-align: center;
+    padding-top: 15px;
+    font-size: x-large;
+}
+
 /*#navbar{height: 50px; background-color: green; margin-top: auto;}*/
-#menu-container{margin-top: 10px;}
-#menu-container::after{content: ""; display: block; clear: both;}
-#left-panel{width: 10%; height:700px; background-color: chartreuse; float: left; font-size: x-large; text-align: center;}
+.container-left-and-right{
+    margin-top: 10px;
+    width: 100%;
+}
 
-/*
-#menue-1{width: 300px; height: 30px; background-color: dimgrey;!*border: solid*!;}
-#menue-2{width: 300px; height: 30px;background-color: dimgrey; border: solid;}
-#menue-3{width: 300px; height: 30px;background-color: dimgrey; !*border: solid;*!}
-#menue-4{width: 300px; height: 30px;background-color: dimgrey; border: solid;}
-#menue-5{width: 300px; height: 30px;background-color: dimgrey; !*border: solid;*!}
-#menue-6{width: 300px; height: 30px;background-color: dimgrey; border: solid;}
-*/
+.container-left-menu{
+    width: 20%;
+    height:700px;
+    background-color: gray;
+    float: left;
+    font-size: x-large;
+    text-align: center;
+}
+
+.main-ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    width: 100%;
+
+}
+.main-ul li{ /*  this property is for li which is under main-ul class */
+    border: 1px solid gray;
+    display: block;
+
+}
+.main-ul li a{ /*this property is for link a under main class main-ul and sub class li */
+    border: 1px; /*1px border around text(link)*/
+    display: block; /*the element is displayed as a block*/
+    background-color: black;
+    color: white; /*text color*/
+    text-decoration: none; /*small line under text will disappear*/
+    transition: 1s; /*color transition within 1s */
+
+}
+.main-ul li a:hover{
+    background-color:gray;
+    color: blue;
+    animation-direction: normal;
+}
 
 
 
-#right-section{ width: 89%;height: 700px;background-color: darkred; float: right;}
-/*#container{margin-top: 10px;}
-#container::after{content:""; display: block; clear: both}
-#left-container{width: 25%;height: 500px; background-color: blueviolet;float: left; }
-#right-container{width: 74%;height: 500px; background-color:indianred; float: right; }*/
-#footer{height: 50px;background-color: darkblue;}
+.right-section{
+    width: 79%;
+    height: 700px;
+    /*background-color: mediumslateblue;*/
+    float: right;
+}
+.right-section-one{
+    width: 49%;
+    height: 100%;
+    border: 1px solid black;
+    float: left;
+}
+right-section-two{
+    width: 48%;
+    height: 100%;
+    border: 1px solid black;
+    float: right;
+}
+
+.footer{
+    height: 100px;
+    /*background-color: blue;*/
+}
+.clear-both{
+    clear: both;
+}
+
+
+
