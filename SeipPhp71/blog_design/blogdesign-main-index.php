@@ -4,12 +4,13 @@
         <meta charset="UTF-8">
         <title>Design</title>
         <link rel="stylesheet" href="styl.css">
+
     </head>
         <body>
             <div class="wrapper">
                 <div class="header">
                     <div class="logo" >
-                       <img src="logo.jpg" width="150px" height="100px">
+                       <img src="photos/logo.jpg" width="150px" height="100px">
 
                     </div>
                     <div class="login"> <button type="button" onclick=""> Login</button></div>
@@ -26,7 +27,7 @@
                         </ul>
                     </div>
                     <div class="right-section">
-                        <div class="right-first" > <?php include 'slideshow\slideshow-index.php';?></div>
+                        <div class="right-first" > <?php include 'slideshow/slideshow-auto-index.php'; ?></div>
 
                         <div class="right-second"></div>
                     </div>
